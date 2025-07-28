@@ -1,0 +1,389 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #121b24;
+    transition: 2s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-30%, -30%);
+    color: #ffffff;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    color: #ffff;
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.7s;
+}
+
+.logo.fade {
+    bottom: 150px;
+}
+
+body {
+    background: linear-gradient(45deg, #fff5f5 90%, #ffadad 200%);
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header a{
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #121b24;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+/* header p{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #121b24;
+    text-decoration: none;
+} */
+
+header a:after{
+    content: "";
+    position: absolute;
+    background-color: #F05454;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    box-shadow: 0 -3px 15px 0 #F05454;
+}
+
+header a:hover {
+    color: #F05454;
+}
+
+header a:hover:after {
+    width: 100%;
+}
+
+header {
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 30px;
+    width: 100%;
+}
+
+
+header .main-logo {
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 35px;
+    width: 35px;
+    object-fit: contain;
+}
+
+.nav_links {
+    list-style: none;
+    margin-right: 30px;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 15px;
+}
+
+.main {
+    display: flex;
+    user-select: none;
+    flex-direction: column;
+    height: 54vh;
+}
+
+.main img.pfp-logo {
+    position: absolute;
+    user-select: none;
+    -webkit-user-drag: none;
+    margin-left: 20px;
+    top: 0;
+    height: 100vh;
+    object-fit: cover;
+    animation: myAnim 4.7s ease 0s 1 normal none;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: scale(1.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    padding: 3%;
+    margin-top: 80px;
+    margin-left: 50vh;
+}
+
+.info h1 {
+    float: left;
+    font-family: 'Quicksand',sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #F05454;
+    margin-bottom: 5px;
+}
+
+.info h2 {
+    float: left;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 35px;
+    color: #121b24;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.info p {
+    float: left;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    color: #121b24;
+    font-weight: 400;
+}
+
+
+.horizontal-line {
+    width: 700px;
+    height: 1.3px;
+    background: #121b24;
+}
+
+.socials {
+    justify-content: space-between;
+    align-items:end;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    margin-top: 100px;
+    padding-left: 49%;
+    padding-right: 25%;
+    padding-bottom: 20px;
+}
+
+.socials img:hover {
+    animation: prev 0.5s ease 0s 1 normal forwards;
+    transition: .3s ease all;
+}
+
+@keyframes prev {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.25);
+    }
+}
+
+.socials div {
+    margin: 0;
+}
+
+.socials a img {
+    height: 45px;
+    width: 45px;
+    -webkit-filter: drop-shadow(1px 1px 1px #121b24);
+    filter: drop-shadow(1px 1px 1px #121b24);
+    transition: .3s;
+}
+
+.cvbutton button{
+    margin-left: 52.4%;
+    padding: 12px 50px;
+	font-size: 18px;
+    font-weight: 700;
+	background-color: #121b24;
+	color: #ddd;
+	border: 1px solid transparent;
+    border-radius: 1%;
+	outline: none;
+	cursor: pointer;
+	box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3);
+	transition: 0.4s;
+}
+
+.cvbutton button:hover{
+	background-color: #FFF5F5;
+	color: #121b24;
+	box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3);
+	border: 1px solid #121b24;
+}
+
+@media screen and (max-width: 1920px) {
+    .main img.pfp-logo {
+        margin-left: 7%;
+    }
+    .info {
+        padding: 1%;
+        margin-top: 8%;
+        margin-left: 30%;
+    }
+
+    .cvbutton {
+        margin-left: 11.5%;
+    }
+
+    .socials {
+        margin-top: 10%;
+        padding-left: 51%;
+        padding-right: 20%;
+        padding-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .main img.pfp-logo {
+        margin-left: 1%;
+    }
+    .info {
+        padding: 1%;
+        margin-top: 8%;
+        margin-left: 30%;
+    }
+
+    .cvbutton {
+        margin-left: 5.5%;
+    }
+
+    .socials {
+        margin-top: 10%;
+        padding-left: 49%;
+        padding-right: 19%;
+        padding-bottom: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    header {
+        padding: 10px;
+    }
+
+    .horizontal-line {
+        width: 500px;
+    }
+
+    .info h1{
+        font-size: 40px;
+    }
+
+    .info h2 {
+        font-size: 25px;
+    }
+
+    .info p {
+        font-size: 23px;
+    }
+
+    .main img.pfp-logo {
+        margin-left: -10%;
+    }
+
+    .info {
+        padding: 1%;
+        margin-top: 8%;
+        margin-left: 35%;
+    }
+
+    .cvbutton {
+        margin-top: 1%;
+        margin-left: 8.6%;
+    }
+
+    .socials {
+        margin-top: 9%;
+        padding-left: 51%;
+        padding-right: 14%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    header a{
+        font-size: 13px;
+        padding: 0 3px;
+    }
+
+    .nav_links {
+        margin-right: -5px;
+    }
+
+    .horizontal-line {
+        width: 400px;
+    }
+
+    .info h1{
+        font-size: 33px;
+    }
+
+    .info h2 {
+        font-size: 20px;
+    }
+
+    .info p {
+        font-size: 18px;
+    }
+
+    .main img.pfp-logo {
+        margin-left: -15%;
+    }
+
+    .info {
+        padding: 1%;
+        margin-top: 8%;
+        margin-left: 35%;
+    }
+
+    .cvbutton {
+        margin-top: -5%;
+        margin-left: 1.5%;
+    }
+
+    .socials {
+        margin-top: 19%;
+        padding-left: 46%;
+        padding-right: 10%;
+    }
+  }
