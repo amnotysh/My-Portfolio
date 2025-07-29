@@ -43,7 +43,7 @@
 }
 
 body {
-    background: linear-gradient(45deg, #fff5f5 90%, #ffadad 200%);
+    background: linear-gradient(45deg, #fdf0f0 90%, #ffadad 200%);
     -ms-overflow-style: none;
 }
 
@@ -129,8 +129,9 @@ header .main-logo {
     position: absolute;
     user-select: none;
     -webkit-user-drag: none;
-    margin-left: 20px;
+    margin-left: 30px;
     top: 0;
+    left: 2%;
     height: 100vh;
     object-fit: cover;
     animation: myAnim 4.7s ease 0s 1 normal none;
@@ -163,7 +164,7 @@ header .main-logo {
     float: left;
     font-family: 'Quicksand',sans-serif;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 48px;
     color: #F05454;
     margin-bottom: 5px;
 }
@@ -171,7 +172,7 @@ header .main-logo {
 .info h2 {
     float: left;
     font-family: 'Quicksand', sans-serif;
-    font-size: 35px;
+    font-size: 32px;
     color: #121b24;
     font-weight: 500;
     margin-top: 5px;
@@ -180,7 +181,7 @@ header .main-logo {
 .info p {
     float: left;
     font-family: 'Quicksand', sans-serif;
-    font-size: 25px;
+    font-size: 24px;
     color: #121b24;
     font-weight: 400;
 }
@@ -203,6 +204,7 @@ header .main-logo {
     padding-left: 49%;
     padding-right: 25%;
     padding-bottom: 20px;
+    user-select: none;
 }
 
 .socials img:hover {
@@ -232,11 +234,11 @@ header .main-logo {
 }
 
 .cvbutton button{
-    margin-left: 52.5%;
+    margin-left: 54.1%;
     padding: 12px 50px;
 	font-size: 18px;
     font-weight: 700;
-	background-color: #121b24;
+	background-color: #121b24;      
 	color: #ddd;
 	border: 1px solid transparent;
     border-radius: 1%;
